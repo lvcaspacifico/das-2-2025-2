@@ -14,3 +14,6 @@ Atualmente estou usando apenas o VS Code pois se tornou mais fácil gerenciar as
 
 
 
+## Update 27-08-2025
+
+Professor pediu pra clonar o repositório. Pode ser que o próximo commit mude a hierarquia de notas em `.md`
