@@ -1,0 +1,89 @@
+# Aula 22/10/2025
+
+# Route 53 => DNS público da AWS
+
+Procura o endereço no DNS local -> vai pra internet
+
+* Ele resolve DNS público (uma public hosted zone)
+* Ele resolve DNS privado (uma private hosted zone)
+
+Geolocalização -> Devolve um IP daquele país
+Latência -> Resolve o servidor mais próximo
+Peso -> 50% das req para X lugar, etc
+Failover -> To mandando para east-vir, east-vir caiu, manda pro BR
+Simples -> 1:1 (nome:IP)
+Multivalue -> Retorna uma lista de IP e o cliente decide
+IP Based -> Meu IP
+
+Permite configurar um mapa com áreas por IP.
+
+## Kit de Sobrevivência de qualquer sys de DNS
+
+* Comprei um domínio, como eu aponto para o meu site?
+    * Posso criar um registro do tipo A -> aponta para um IPv4
+    * Se for um sys IPv6 você cria um tipo AAAA
+    * CNAME -> Um DNS aponta para outro, delega a resolução
+    * TXT -> É uma info qualquer que a empresa pode pedir pra colocar no DNS pra provar que é seu mesmo
+
+# Automate your architecture
+
+O próximo passo quando você já manja da AWS é automatizar rotinas. Ex: se cair, tu não faz manual, tu automatiza um cara
+
+Agora vamos aprender o conceito de parar de fazer as coisas na mão
+
+### Riscos de fazer na mão
+
+- Inconsistências
+- Falta de versionamento
+- Falta de audit trails
+
+### Infra as code
+
+Definir um template, passar pra ferramenta, ela faz pra você
+
+CloudFormation = Terraform da AWS mas não é agnóstico, é focado na AWS
+
+### Benefícios de infra as code
+
+- Repetibiidade
+- Velocidade no deploy de infras complexas
+- Limpeza apagando a stack, o que limpa os recursos criados
+- Reusabilidade, repitabilidade, manutenabilidade
+
+### Stack
+
+A stack é uma representação lógica de listagem dos recursos criados (telinha no CF)
+
+### Cloud Formation
+
+Ele é grátis
+
+Ele é a base do pé de feijão (Beanstalk) -> Fala pra ele, que ele cria o server Java pra rodar o app Spring Boot
+
+Beanstalk e Sam são muito legais de aprender pra trabalhar com AWS
+
+
+## Using conditions
+
+- Do mesmo template posso criar o env dev e prod
+
+
+## Drift
+
+- Se tu mudar do template, ele te avisa
+
+# Amazon Q
+
+Amazon investe pesado a muitos anos
+
+Baseado gato trazia ratos, ai o dono treinou com fotos pra não abrir a portinha pra ele quando tivesse rato taggeando imagens do gato com ou sem rato.
+
+
+Tem o Amazon Q Developer pra ajudar a programar
+- Escaneia teu código em busca de vulnerabilidades
+- Tá integrado na console da AWS
+- Manutenção e bugfixes
+
+
+
+
