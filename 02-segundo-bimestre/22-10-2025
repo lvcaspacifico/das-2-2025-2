@@ -85,5 +85,17 @@ Tem o Amazon Q Developer pra ajudar a programar
 - Manutenção e bugfixes
 
 
+## Guided lab: Automating Infrastructure with AWS CloudFormation
 
+Lab [disponível aqui](https://awsacademy.instructure.com/courses/129676/assignments/1485149?module_item_id=12389414) feito ✅
+
+Score 15/20
+
+Aparentemente está com o final bugado porque ao tentar acessar o Designer conforme indicado deu erro 404 com a mensagem:
+
+404
+The page you tried was not found.
+Go to Console Home
+You may have typed the address incorrectly or you may have used an outdated link.
+If you found a broken link from another site or from our site, please email us.
 
